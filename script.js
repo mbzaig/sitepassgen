@@ -87,16 +87,41 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-
+let charLen, charLower, charUpper, charNum, charSpecial;
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+  charLen = prompt("Please enter the length of the password between 10-64")
+
+  if (charLen < 10 || charLen > 64) {
+    alert("Password length must be between 10 and 64 characters");
+    return;
+  }
+  else {
+    getCharacterTypes();
+  }
+
+
+}
+// Function to prompt user to select character types only after selecting a valid password length
+function getCharacterTypes() {
+
+  charLower = confirm("Do you want your password to have lowercase characters");
+  console.log(charLower);
+  charUpper = confirm("Do you want your password to have UPPERCASE characters");
+  console.log(charUpper);
+  charNum = confirm("Do you want your password to have Numbers characters");
+  console.log(charNum);
+  charSpecial = confirm("Do you want your password to have Special characters");
+  console.log(charSpecial);
+
+  if (charLower == false && charUpper == false && charNum == false && charSpecial == false) {
+    alert("Password must contain atleast one character type");
+    getCharacterTypes();
+  }
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
 
-}
 
 // Function to generate password with user input
 function generatePassword() {

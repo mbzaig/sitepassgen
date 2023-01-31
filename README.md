@@ -34,7 +34,7 @@
 
       - Length of password: 
 
-       - At least 10 characters but no more than 64.
+       - At least 8 characters but no more than 128.
 
      - Character types:
 
@@ -55,7 +55,7 @@
 ## Usage
 The website can be used to generate random passwords
 
-![Demo](/images/Demo-Standard.gif) 
+![Demo](/images/Demo.gif) 
 ---
 ## Credits
 

@@ -91,10 +91,10 @@ let charLen, charLower, charUpper, charNum, charSpecial;
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-  charLen = prompt("Please enter the length of the password between 10-64")
+  charLen = prompt("Please enter the length of the password between 8-64")
 
-  if (charLen < 10 || charLen > 64) {
-    alert("Password length must be between 10 and 64 characters - click GENERATE PASSWORD AGAIN");
+  if (charLen < 8 || charLen > 64) {
+    alert("Password length must be between 8 and 64 characters - click GENERATE PASSWORD AGAIN");
     return;
   }
   else {
